@@ -58,11 +58,27 @@ public class AquarioLombriga {
 	}
 	
 	
-	public void apresenta() {
-		String lomb_no_aq;
-		for (int i = 0; i < tamanho_aquario; i++) {
-			if 
+	public String apresenta() {
+		String lomb_no_aq = "";
+		for (int i = 1; i <= tamanho_aquario; i++) {
+			if (para_esquerda == 0) {
+				if (i == posicao)
+					lomb_no_aq += "O";
+				else if (i < posicao && i >= (posicao - tamanho_lombriga + 1))
+					lomb_no_aq += "@";
+				else
+					lomb_no_aq += "#";
+			} 
+			else {
+				if (i == posicao)
+					lomb_no_aq += "O";
+				else if (i > posicao && i <= (posicao + tamanho_lombriga -1))
+					lomb_no_aq += "@";
+				else
+					lomb_no_aq += "#";
+			}
 		}
+		return lomb_no_aq;
 	}
 	
 }
