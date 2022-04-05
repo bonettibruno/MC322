@@ -1,24 +1,68 @@
 package pt.c02oo.s02classe.s03lombriga;
 
 public class AquarioLombriga {
-	int tamanho_lombriga, tamanho_aquario, posicao, esq_ou_dir;
+	int tamanho_lombriga, tamanho_aquario, posicao, para_esquerda;
 
 	public AquarioLombriga(int tamanho_lombriga, int tamanho_aquario, int posicao) {
-	this.tamanho_lombriga = tamanho_lombriga;
+		if (tamanho_lombriga > tamanho_aquario)
+			this.tamanho_lombriga = tamanho_aquario;
+		else 
+			this.tamanho_lombriga = tamanho_lombriga;
+
 	this.tamanho_aquario = tamanho_aquario;
-	this.posicao = posicao;
-	this.esq_ou_dir = 1;
+
+	if (posicao > tamanho_aquario)
+		this.posicao = 1;
+	else if (posicao < 1)
+		this.posicao = 1;
+	else if (posicao + tamanho_lombriga - 1 > tamanho_aquario)
+		this.posicao = 1;
+	else if (posicao - tamanho_lombriga < 1)
+		this.posicao = 1;
+	else
+		this.posicao = posicao;
+		
+	this.para_esquerda = 1;
 	}
 
 	public void crescer() {
-	if (tamanho_lombriga < tamanho_aquario)
-	tamanho_lombriga = tamanho_lombriga + 1;
+		if (tamanho_lombriga < tamanho_aquario)
+			tamanho_lombriga = tamanho_lombriga + 1;
+		}
+	
+	public void virar() {
+		if (para_esquerda == 1) {
+			para_esquerda = 0;
+			posicao = posicao + tamanho_lombriga - 1;
+		}
+		else {
+			para_esquerda = 1;
+			posicao = posicao - tamanho_lombriga + 1;
+		}
 	}
+	
 
 	public void mover() {
-	if (posicao > 0 && posicao < tamanho_aquario) {
-
+	if (para_esquerda == 1) {
+		if (posicao != 1)
+			posicao = posicao - 1;
+		else
+			virar();
+		}
+	else {
+		if (posicao != tamanho_aquario)
+			posicao = posicao + 1;
+		else
+			virar();
+		}
 	}
+	
+	
+	public void apresenta() {
+		String lomb_no_aq;
+		for (int i = 0; i < tamanho_aquario; i++) {
+			if 
+		}
 	}
-
+	
 }

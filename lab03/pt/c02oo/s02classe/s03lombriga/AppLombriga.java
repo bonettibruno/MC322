@@ -7,17 +7,6 @@ public class AppLombriga {
       
       String lombrigas[] = tk.recuperaLombrigas();
       
-      for (int l = 0; l < lombrigas.length; l++)
-         System.out.println(lombrigas[l]);
-      
-      tk.gravaPasso("=====");
-      tk.gravaPasso("##O@@@##");
-      tk.gravaPasso("#O@@@###");
-      tk.gravaPasso("#O@@@@##");
-      tk.gravaPasso("O@@@@###");
-      tk.gravaPasso("@@@@O###");
-      tk.gravaPasso("#@@@@O##");
-      
       tk.stop();
    }
 
