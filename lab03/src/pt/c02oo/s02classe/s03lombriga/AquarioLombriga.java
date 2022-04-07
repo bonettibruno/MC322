@@ -20,7 +20,7 @@ public class AquarioLombriga {
 		else if (posicao - tamanho_lombriga < 1)
 			this.posicao = 1;
 		else
-			this.posicao = posicao;
+			this.posicao = posicao+1;
 		
 		this.para_esquerda = 1;
 	}
@@ -48,8 +48,7 @@ public class AquarioLombriga {
 			posicao = posicao - 1;
 		else
 			virar();
-		}
-	else {
+	} else {
 		if (posicao != tamanho_aquario)
 			posicao = posicao + 1;
 		else

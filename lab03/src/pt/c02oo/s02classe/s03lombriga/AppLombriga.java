@@ -11,11 +11,11 @@ public class AppLombriga {
       
       
       for (int i = 0; i < (lombrigas.length); i++) {
-    	 String cenas[] = new String[lombrigas[i].length()-6];
-         cenas = a1.anima(lombrigas[i]);
+    	 String cenas_do_aq[] = new String[lombrigas[i].length()-6];
+         cenas_do_aq = a1.anima(lombrigas[i]);
          tk.gravaPasso("=====");
-         for(int j = 0; j < cenas.length; j++) {
-        	 tk.gravaPasso(cenas[j]);
+         for(int j = 0; j < cenas_do_aq.length; j++) {
+        	 tk.gravaPasso(cenas_do_aq[j]);
          }
       }  
       tk.stop();
