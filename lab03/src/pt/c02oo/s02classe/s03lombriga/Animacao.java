@@ -19,9 +19,9 @@ public class Animacao {
 		
 		for(int i = 6; i < dados.length(); i++) {
 			   estado_aquario[i - 6] = animacoes.apresenta();
-			   if (dados_char[i - 6] == 'M') {
+			   if (dados_char[i] == 'M') {
 				   animacoes.mover();
-			   } else if (dados_char[i - 6] == 'C') {
+			   } else if (dados_char[i] == 'C') {
 				   animacoes.crescer();
 			   } else {
 				   animacoes.virar();

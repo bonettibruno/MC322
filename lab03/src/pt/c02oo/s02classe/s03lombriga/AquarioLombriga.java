@@ -26,10 +26,14 @@ public class AquarioLombriga {
 	}
 
 	public void crescer() {
-		if (tamanho_lombriga < tamanho_aquario)
-			tamanho_lombriga = tamanho_lombriga + 1;
+		if (para_esquerda == 0) {
+			if (posicao - tamanho_lombriga > 0)
+				tamanho_lombriga = tamanho_lombriga + 1;
+		} else {
+			if (posicao + tamanho_lombriga < tamanho_aquario)
+				tamanho_lombriga = tamanho_lombriga + 1;
 		}
-	
+	}
 	public void virar() {
 		if (para_esquerda == 1) {
 			para_esquerda = 0;
